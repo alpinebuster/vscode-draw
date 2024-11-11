@@ -1,23 +1,20 @@
 {
-	"name": "vscode-drawio",
+	"name": "vscode_drawio",
 	"private": true,
 	"displayName": "Draw.io Integration",
-	"description": "This unofficial extension integrates Draw.io into VS Code.",
-	"version": "999.0.0-alpha",
-	"license": "GPL-3.0",
-	"publisher": "hediet",
+	"description": "This extension integrates Draw.io into VS Code.",
+	"version": "2.0.0",
+	"publisher": "alpinebuster",
 	"keywords": [
 		"drawio",
 		"diagram",
-		"diagrams.net",
 		"visio",
 		"architecture",
-		"uml",
-		"code link"
+		"uml"
 	],
 	"author": {
-		"email": "henning.dieterichs@live.de",
-		"name": "Henning Dieterichs"
+		"email": "imzqqq@hotmail.com",
+		"name": "alpinebuster"
 	},
 	"readme": "./README.md",
 	"icon": "docs/logo.drawio.png",
@@ -26,18 +23,18 @@
 		"workspace"
 	],
 	"engines": {
-		"vscode": "^1.46.0"
+		"vscode": "^1.95.0"
 	},
 	"categories": [
 		"Visualization"
 	],
 	"activationEvents": [
-		"onCustomEditor:hediet.vscode-drawio",
-		"onCustomEditor:hediet.vscode-drawio-text",
-		"onCommand:hediet.vscode-drawio.newDiagram"
+		"onCustomEditor:alpinebuster.vscode-drawio",
+		"onCustomEditor:alpinebuster.vscode-drawio-text",
+		"onCommand:alpinebuster.vscode-drawio.newDiagram"
 	],
 	"repository": {
-		"url": "https://github.com/hediet/vscode-drawio.git"
+		"url": "https://github.com/alpinebuster/vscode_drawio.git"
 	},
 	"browser": "./dist/extension/index",
 	"main": "./dist/extension/index",
@@ -66,7 +63,7 @@
 		],
 		"customEditors": [
 			{
-				"viewType": "hediet.vscode-drawio",
+				"viewType": "alpinebuster.vscode-drawio",
 				"displayName": "Draw.io (Binary)",
 				"selector": [
 					{
@@ -79,7 +76,7 @@
 				"priority": "default"
 			},
 			{
-				"viewType": "hediet.vscode-drawio-text",
+				"viewType": "alpinebuster.vscode-drawio-text",
 				"displayName": "Draw.io",
 				"selector": [
 					{
@@ -100,60 +97,60 @@
 		],
 		"commands": [
 			{
-				"command": "hediet.vscode-drawio.convert",
+				"command": "alpinebuster.vscode-drawio.convert",
 				"title": "Convert To...",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.export",
+				"command": "alpinebuster.vscode-drawio.export",
 				"title": "Export To...",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.toggleCodeLinkActivation",
+				"command": "alpinebuster.vscode-drawio.toggleCodeLinkActivation",
 				"title": "Toggle Code Link Activation",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.changeTheme",
+				"command": "alpinebuster.vscode-drawio.changeTheme",
 				"title": "Change Theme",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.editDiagramAsText",
+				"command": "alpinebuster.vscode-drawio.editDiagramAsText",
 				"title": "Edit Diagram As Text (Experimental)",
-				"enablement": "hediet.vscode-drawio.experimentalFeaturesEnabled",
+				"enablement": "alpinebuster.vscode-drawio.experimentalFeaturesEnabled",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.linkCodeWithSelectedNode",
+				"command": "alpinebuster.vscode-drawio.linkCodeWithSelectedNode",
 				"title": "Link Code with Selected Node",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.newDiagram",
+				"command": "alpinebuster.vscode-drawio.newDiagram",
 				"title": "New Draw.io Diagram",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.linkFileWithSelectedNode",
+				"command": "alpinebuster.vscode-drawio.linkFileWithSelectedNode",
 				"title": "Link File With Selected Node",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.linkSymbolWithSelectedNode",
+				"command": "alpinebuster.vscode-drawio.linkSymbolWithSelectedNode",
 				"title": "Link Symbol With Selected Node",
 				"category": "Draw.io"
 			},
 			{
-				"command": "hediet.vscode-drawio.linkWsSymbolWithSelectedNode",
+				"command": "alpinebuster.vscode-drawio.linkWsSymbolWithSelectedNode",
 				"title": "Link Workspace Symbol With Selected Node",
 				"category": "Draw.io"
 			}
 		],
 		"keybindings": [
 			{
-				"command": "hediet.vscode-drawio.linkCodeWithSelectedNode",
+				"command": "alpinebuster.vscode-drawio.linkCodeWithSelectedNode",
 				"key": "shift+F3",
 				"when": "!findWidgetVisible"
 			}
@@ -161,19 +158,19 @@
 		"configuration": {
 			"title": "Draw.io Integration",
 			"properties": {
-				"hediet.vscode-drawio.offline": {
+				"alpinebuster.vscode-drawio.offline": {
 					"type": "boolean",
 					"default": true,
 					"title": "Use Offline Mode",
 					"description": "When enabled, the bundled instance of Draw.io is used."
 				},
-				"hediet.vscode-drawio.codeLinkActivated": {
+				"alpinebuster.vscode-drawio.codeLinkActivated": {
 					"type": "boolean",
 					"default": false,
 					"title": "Code Link Enabled",
 					"description": "When activated, selecting a node will navigate to an associated code section."
 				},
-				"hediet.vscode-drawio.local-storage": {
+				"alpinebuster.vscode-drawio.local-storage": {
 					"anyOf": [
 						{
 							"type": "object"
@@ -187,7 +184,7 @@
 					"title": "Draw.io Local Storage",
 					"description": "Only change this property if you know what you are doing. Manual changes to this property are not supported!"
 				},
-				"hediet.vscode-drawio.styles": {
+				"alpinebuster.vscode-drawio.styles": {
 					"title": "Styles",
 					"description": "Defines an array of objects that contain the colours (fontColor, fillColor, strokeColor and gradientColor) for the Style tab of the format panel if the selection is empty. These objects can have a commonStyle (which is applied to both vertices and edges), vertexStyle (applied to vertices) and edgeStyle (applied to edges), and a graph with background and gridColor. An empty object means apply the default colors",
 					"type": "array",
@@ -222,28 +219,28 @@
 						}
 					}
 				},
-				"hediet.vscode-drawio.defaultVertexStyle": {
+				"alpinebuster.vscode-drawio.defaultVertexStyle": {
 					"title": "Default Vertex Style",
 					"description": "Default styling of vertices (shapes).",
 					"type": "object"
 				},
-				"hediet.vscode-drawio.defaultEdgeStyle": {
+				"alpinebuster.vscode-drawio.defaultEdgeStyle": {
 					"title": "Default Edge Style",
 					"description": "Default styling of edges.",
 					"type": "object"
 				},
-				"hediet.vscode-drawio.simpleLabels": {
+				"alpinebuster.vscode-drawio.simpleLabels": {
 					"type": "boolean",
 					"default": false,
 					"title": "Use SimpleLabels",
 					"description": "When enabled, no ForeignObjects are used in the svg."
 				},
-				"hediet.vscode-drawio.colorNames": {
+				"alpinebuster.vscode-drawio.colorNames": {
 					"title": "Color Names",
 					"description": "Names for colors, eg. {‘FFFFFF’: ‘White’, ‘000000’: ‘Black’} that are used as tooltips (uppercase, no leading # for the colour codes)",
 					"type": "object"
 				},
-				"hediet.vscode-drawio.presetColors": {
+				"alpinebuster.vscode-drawio.presetColors": {
 					"title": "Preset Colors",
 					"description": "Color codes for the upper palette in the color dialog.",
 					"type": "array",
@@ -252,7 +249,7 @@
 						"description": "Use hex codes without # at the beginning only (FFFFFF for absolute white, for example)."
 					}
 				},
-				"hediet.vscode-drawio.customColorSchemes": {
+				"alpinebuster.vscode-drawio.customColorSchemes": {
 					"title": "Custom Color Schemes",
 					"markdownDescription": "Available color schemes in the style section at the top of the format panel. See example [here](https://www.diagrams.net/doc/faq/custom-colours-confluence-cloud#default-colour-schemes---format-panel)",
 					"type": "array",
@@ -286,7 +283,7 @@
 						}
 					}
 				},
-				"hediet.vscode-drawio.customFonts": {
+				"alpinebuster.vscode-drawio.customFonts": {
 					"type": "array",
 					"items": {
 						"type": "string"
@@ -295,7 +292,7 @@
 					"title": "Custom Fonts",
 					"description": "Configures the Draw.io editor to use custom fonts."
 				},
-				"hediet.vscode-drawio.customLibraries": {
+				"alpinebuster.vscode-drawio.customLibraries": {
 					"type": "array",
 					"items": {
 						"type": "object",
@@ -347,7 +344,7 @@
 					"title": "Custom Libraries",
 					"description": "Configures the Draw.io editor to use custom libraries."
 				},
-				"hediet.vscode-drawio.plugins": {
+				"alpinebuster.vscode-drawio.plugins": {
 					"type": "array",
 					"items": {
 						"anyOf": [
@@ -366,7 +363,7 @@
 					"title": "Plugins",
 					"description": "Loads Draw.io plugins."
 				},
-				"hediet.vscode-drawio.knownPlugins": {
+				"alpinebuster.vscode-drawio.knownPlugins": {
 					"type": "array",
 					"items": {
 						"type": "object",
@@ -385,13 +382,13 @@
 					"default": [],
 					"title": "Known Plugins"
 				},
-				"hediet.vscode-drawio.online-url": {
+				"alpinebuster.vscode-drawio.online-url": {
 					"type": "string",
 					"default": "https://embed.diagrams.net/",
 					"title": "Online URL",
 					"description": "The app to use when offline mode is disabled."
 				},
-				"hediet.vscode-drawio.theme": {
+				"alpinebuster.vscode-drawio.theme": {
 					"title": "Draw.io Theme",
 					"type": "string",
 					"default": "automatic",
@@ -405,18 +402,18 @@
 					],
 					"description": "The theme to use for the Draw.io editor. Use \"automatic\" to automatically choose a Draw.io theme that matches your current VS Code theme."
 				},
-				"hediet.vscode-drawio.zoomFactor": {
+				"alpinebuster.vscode-drawio.zoomFactor": {
 					"type": "number",
 					"default": 1.2,
 					"title": "Draw.io zoom factor",
 					"description": "Defines the zoom factor for mouse wheel and trackpad zoom."
 				},
-				"hediet.vscode-drawio.globalVars": {
+				"alpinebuster.vscode-drawio.globalVars": {
 					"type": "object",
 					"title": "Draw.io global variables.",
 					"description": "Defines global variables for system-wide placeholders using a JSON structure with key, value pairs. Keep the number of global variables small."
 				},
-				"hediet.vscode-drawio.resizeImages": {
+				"alpinebuster.vscode-drawio.resizeImages": {
 					"type": [
 						"boolean",
 						"null"
@@ -430,15 +427,15 @@
 		"menus": {
 			"explorer/context": [
 				{
-					"when": "hediet.vscode-drawio.active",
-					"command": "hediet.vscode-drawio.linkFileWithSelectedNode",
+					"when": "alpinebuster.vscode-drawio.active",
+					"command": "alpinebuster.vscode-drawio.linkFileWithSelectedNode",
 					"group": "Draw.io"
 				}
 			],
 			"commandPalette": [
 				{
 					"when": "false",
-					"command": "hediet.vscode-drawio.linkFileWithSelectedNode"
+					"command": "alpinebuster.vscode-drawio.linkFileWithSelectedNode"
 				}
 			]
 		}
